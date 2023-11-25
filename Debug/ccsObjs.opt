@@ -1,0 +1,5 @@
+"./main.obj"
+"./uart2usb.obj"
+"../lnk_msp430G2553.cmd"
+-llibmath.a
+-llibc.a
