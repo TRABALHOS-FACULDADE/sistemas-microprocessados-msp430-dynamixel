@@ -1,8 +1,3 @@
-//  UART2USB library
-//  Rebeca Tourinho
-//  February 2016
-//  Built with Code Composer Studio v6
-//***************************************************************************************
 
 #include <msp430.h>
 #include <stdint.h>
@@ -122,64 +117,14 @@ void send_ping(void)
 
 
 
-/* bagunça
-void parameters()
-
-
-void send_instruction(uint8_t id, char instruction, char parameters)
-{
-	int i = 0;
-
-	dxlvector[0] = 0xFF;
-	dxlvector[1] = 0xFF;
-	dxlvector[2] = id;
-
-	switch(instruction){
-	case PING:
-		dxlvector[3]=0x01;
-		break;
-
-	case READ_DATA:
-		dxlvector[3]=0x02;
-		break;
-
-	case WRITE_DATA:
-		dxlvector[3]=0x03;
-		break;
-
-	case ACTION:
-		dxlvector[3]=0x05;
-		break;
-
-	case RESET:
-		dxlvector[3]=0x06;
-		break;
-	}
-
-
-// A ideia agora eh contar o parameters para extrair o lenght e atribuir N
-// parametros a N espacos de vetor
-
-
-	send_string(dxlvector);
-
-}
-
-
-void get_status()
-{
-
-}
-
-*/
 
 
 
 #pragma vector=USCI_A1_VECTOR
 __interrupt void USCI_A1_ISR(void)
 {
-	//USBsendChar(UCA1RXBUF);		//Teste 1
+	//USBsendChar(UCA1RXBUF);
 	flag = RX_OK;
 	UCA1IFG &= ~UCRXIFG;
-//    __bic_SR_register_on_exit(LPM3_bits);		//N sei a necessidade disso
+//    __bic_SR_register_on_exit(LPM3_bits);
 }

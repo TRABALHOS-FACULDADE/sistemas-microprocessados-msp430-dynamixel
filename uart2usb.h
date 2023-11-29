@@ -1,8 +1,3 @@
-//  Rebeca Tourinho
-//  February 2016
-//  Built with Code Composer Studio v6
-//***************************************************************************************
-
 #include <stdint.h>
 
 #define RX_OK 1

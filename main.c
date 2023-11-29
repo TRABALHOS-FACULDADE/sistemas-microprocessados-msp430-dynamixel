@@ -1,7 +1,3 @@
-//  Rebeca Tourinho
-//  February 2016
-//  Built with Code Composer Studio v6
-//***************************************************************************************
 
 #include <msp430.h>
 #include "uart2usb.h"
@@ -22,8 +18,7 @@ int main(void)
 
     	if(flag==RX_OK)
     	{
-    		send_ping();
-    		//send_string((char *) "BECA");		// Test 2
+    		send_ping();    		//send_string((char *) "BECA");		// Test 2
     		flag = RX_NOK;
     	}
 
